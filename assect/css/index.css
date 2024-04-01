@@ -1,0 +1,667 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+@import url(https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Zen+Kaku+Gothic+Antique&display=swap);
+
+:root {
+  --navbar-bg-color: #ffffff;
+  --navbar-text-color: hsl(0, 0%, 0%);
+  --navbar-text-color-focus: rgb(150, 125, 125);
+  --navbar-bg-contrast: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-weight: bolds;
+}
+
+.container {
+  max-width: 1000px;
+
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#navbar {
+  --navbar-height: 10vh;
+  position: fixed;
+  z-index: 7;
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.089);
+  height: var(--navbar-height);
+  background-color: var(--navbar-bg-color);
+  left: 0;
+  right: 0;
+}
+
+.navbar-container {
+  display: flex;
+
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.navbar-item {
+  margin: 0.4em;
+  width: 100%;
+}
+
+.home-link,
+.navbar-link {
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+  transition: 0.5s;
+ 
+}
+
+.home-link:is(:focus, :hover) {
+  color: var(--navbar-text-color-focus);
+}
+
+.navbar-link {
+  justify-content: center;
+  width: 100%;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+}
+
+.navbar-link:is(:focus, :hover) {
+  color: var(--navbar-text-color-focus);
+  background-color: var(--navbar-bg-contrast);
+}
+
+.navbar-logo {
+  color: #042749;
+  font-size: larger;
+
+  font-weight: 700;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 0.5em;
+}
+
+#navbar-toggle {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  flex-direction: column;
+}
+
+.icon-bar {
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin: 2px;
+ 
+  border-radius: 40px;
+  background-color: var(--navbar-text-color);
+}
+
+#navbar-toggle:is(:focus, :hover) .icon-bar {
+  background-color: var(--navbar-text-color-focus);
+}
+
+#navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {
+  position: absolute;
+  margin: 0;
+  width: 30px;
+}
+
+#navbar-toggle[aria-expanded="true"] .icon-bar:first-child {
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+#navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+
+#navbar-toggle[aria-expanded="true"] .icon-bar:last-child {
+  transform: rotate(-45deg);
+  transition: 0.5s;
+}
+
+#navbar-menu {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  position: fixed;
+  top: var(--navbar-height);
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+}
+
+#navbar-toggle[aria-expanded="true"] + #navbar-menu {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-links {
+  list-style: none;
+  position: absolute;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  right: 0;
+}
+
+#navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {
+  padding: 1em;
+}
+
+.main {
+  display: flex;
+}
+
+.introsection {
+  display: flex;
+
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  text-align: center;
+}
+
+.introsection img {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  margin-top: 65px;
+}
+
+@media only screen and (max-width: 767px) {
+  .introsection {
+    display: flex;
+    
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    flex-direction: column;
+   
+    height: 55vh;
+  }
+
+  .introsection img {
+
+    height: 45vh;
+
+    object-fit: cover;
+  }
+}
+
+.links {
+  
+  height: 70px;
+  width: 370px;
+
+  background: #ffffff;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links img {
+  margin: 10px;
+}
+
+.links img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 700px) {
+}
+
+@media screen and (min-width: 700px) {
+}
+
+/* portfolio section */
+.portfolio h1 {
+  display: flex;
+  justify-content: center;
+color: #333333;
+  font-size: 40px;
+  padding-top: 40px;
+  font-weight: 600;
+}
+
+.portfolio h2 {
+  font-size: 20px;
+  margin: 20px;
+
+  font-weight: 500;
+  margin: auto;
+
+  padding: 20px 0;
+}
+
+/* styles.css */
+.mainport {
+  height: auto;
+
+  color: #121212;
+}
+
+.card-container {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  word-wrap: break-word;
+}
+.card img{
+  padding: 20px;
+}
+.card {
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+ 
+}
+
+.card img:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: 0.5s;
+}
+
+@media only screen and (min-width: 768px) {
+  .mainport {
+    z-index: 0;
+  }
+
+  .card-container {
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    margin: 0 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    word-wrap: break-word;
+  }
+
+  .card {
+    
+
+    text-align: center;
+    width: 40%;
+  }
+ 
+}
+
+/* about section */
+
+@media only screen and (max-width: 767px) {
+  .about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f5f5f5;
+  }
+
+  .info h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #333333;
+  }
+
+  .detailInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    justify-content: center;
+  }
+
+  .detailInfo h1 {
+    font-size: 40px;
+    margin: 20px 0;
+    font-weight: 600;
+  }
+
+  .detailInfo h2 {
+    font-size: 20px;
+  }
+  .detailInfo h2 span{
+    font-weight: 600;
+    color: #333333;
+  }
+  .resume {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info h1 {
+    font-size: 65px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .detailInfo {
+    display: flex;
+    flex-direction: column;
+
+ 
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .myabo{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    color: rgb(19, 19, 19);
+    background: #ebedff;
+  }
+  .myabo img{
+    padding: 100px;
+    
+  }
+  .infoAbout{
+    margin-right: 60px;
+  }
+  .detailInfo h1 {
+    margin: 10px 0;
+    font-size: 40px;
+    color: #202020;
+    font-weight: 600;
+  }
+.resumeSectiion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+  .detailInfo h2 {
+    font-size: 18px;
+  }
+  .detailInfo h2 span{
+    font-weight: 600;
+    color: #333333;
+  }
+
+
+
+  .resume {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 262px;
+    background-color: black;
+    color: #ffffff;
+    font-size: 18px;
+  }
+  .resumeSectiion h1{
+    margin: 50px 0;
+font-style: 40px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.designProcess {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  margin: 20px;
+  height: 100vh;
+ 
+}
+
+.designProcess h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.designProcess h3 {
+  margin-top: 30px;
+  font-size: 20px;
+  margin: 0 260px;
+
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxForProcess {
+  margin: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxForProcess div {
+  margin: 10px;
+  height: 300px;
+  width: 300px;
+  padding: 30px;
+  color: #202020;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    160deg,
+    #eeaeca 0%,
+    #a96ff5 47%,
+    #94bbe9 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.boxForProcess div:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.boxForProcess span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+  .boxForProcess {
+    display: flex;
+
+    margin: 0;
+    height: auto;
+    overflow: scroll;
+ 
+    align-items: center;
+
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .boxForProcess div,
+  p {
+   
+    width: 250px;
+    padding: 20px;
+  }
+.designProcess{
+  justify-content: center;
+}
+  .designProcess h1 {
+    font-size: 40px;
+    margin-top: 100px;
+
+    display: flex;
+    
+  }
+  .designProcess h3 {
+    font-size: 18px;
+ margin: 20px;
+ margin-bottom: 50px;
+text-align:justify;
+
+
+  
+
+  }
+}
+.skills{
+  
+    padding: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+height: 100vh;
+background: #ebedff;
+background: linear-gradient(135deg, #FFD700, #FFA500, #FF69B4, #9370DB, #7FFFD4);
+}
+.skills h1{
+  color: #202020;
+}
+.skillSetion{
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+gap: 30px;
+margin-top: 50px;
+}
+
+.ux{
+display: flex;
+justify-content: center;
+height: 400px;
+width: 350px;
+align-items: center;
+flex-direction: column;
+background: rgb(27, 18, 22);
+color: #c4c4c4;
+}
+
+.ux:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.skillSetion h2{
+font-weight: 600;
+margin-bottom: 10px;
+  font-size: 30px;
+  cursor: pointer;
+
+}
+.frontend{
+  display: flex;
+justify-content: center;
+height: 400px;
+width: 350px;
+
+align-items: center;
+flex-direction: column;
+background: rgb(27, 18, 22);
+color: #c4c4c4;
+}
+.frontend:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  
+}
+.skills h1{
+  font-size: 40px;
+ font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+  .skillSetion{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .skillSetion h2{
+    margin-left: 20px;
+  }
+  .skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    
+    }
+}
+
