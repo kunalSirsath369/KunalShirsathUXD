@@ -83,10 +83,11 @@ body {
 }
 
 .navbar-logo {
-  color: #042749;
-  font-size: larger;
+  color: #057df5;
+  font-size: 22px;
+  letter-spacing: 4.68px;
+  font-family: Schluber;
 
-  font-weight: 700;
   justify-content: center;
   flex-shrink: 0;
   margin-right: 0.5em;
@@ -246,6 +247,7 @@ body {
 /* portfolio section */
 .portfolio h1 {
   display: flex;
+  margin-top: 50px;
   justify-content: center;
 color: #333333;
   font-size: 40px;
@@ -589,7 +591,7 @@ align-items: center;
 flex-direction: column;
 height: 100vh;
 background: #ebedff;
-background: linear-gradient(135deg, #FFD700, #FFA500, #FF69B4, #9370DB, #7FFFD4);
+
 }
 .skills h1{
   color: #202020;
