@@ -23,18 +23,19 @@
       <header id="navbar">
         <nav class="navbar-container container">
           <a href="/" class="home-link">
-            <div class="navbar-logo">
+            <!-- <div class="navbar-logo">
               <div class="logo">KUNAL DESIGNS</div>
-            </div>
+            </div> -->
           </a>
           <button
             type="button"
             id="navbar-toggle"
+            class="btnfortogg"
             aria-controls="navbar-menu"
             aria-label="Toggle menu"
             aria-expanded="false"
           >
-            <span style="height: 8px" class="icon-bar"></span>
+            <span style="height: 6px" class="icon-bar"></span>
             <span style="height: 6px" class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
@@ -49,9 +50,7 @@
               <li class="navbar-item">
                 <a class="navbar-link" href="#About">About</a>
               </li>
-              <li class="navbar-item">
-                <a class="navbar-link" href="#skill">Technical Skill</a>
-              </li>
+            
               <li class="navbar-item">
                 <a class="navbar-link" href="#contact">Contact</a>
               </li>
@@ -78,11 +77,17 @@
           );
           navbarMenu.addEventListener("click", toggleNavbarVisibility);
         </script>
+        
       </header>
+      <div class="herosec">
+        <h1>KUNAL SHIRSATH</h1>
+        <h2>An innovative UX Designer · Frontend Developer creating future user experience.</h2>
+    
+      </div>
     </div>
-    <div class="introsection">
+    <!-- <div class="introsection">
       <img src="./assect/images/bannerforbackgrond.png" alt="" />
-    </div>
+    </div> -->
     <div class="mainport" id="Portfolio">
       <div class="portfolio">
         <h1 style="margin: 20px 0 40px 0">Portfolio</h1>
@@ -94,16 +99,17 @@
             <h2>MeloVerse Music App</h2>
           </div>
           <div class="card">
+            <a href="https://medium.com/@shirsathkunal11/tees-shirts-responsive-website-ed755456573c">
+              <img src="./assect/images/Wireframe - 2.png" alt="Card 1"
+            /></a>
+            <h2>Public Transport QR Code Recharge or Buying App</h2>
+          </div>
+          <div class="card">
             <a href="https://medium.com/@shirsathkunal11/geargamer-hub-responsive-website-857a004fad4e">
             <img src="./assect/images/Frame 8.png" alt="Card 1" /></a>
             <h2>GearGamer Hub Responsive Website</h2>
           </div>
-          <div class="card">
-            <a href="https://medium.com/@shirsathkunal11/tees-shirts-responsive-website-ed755456573c">
-              <img src="./assect/images/cloth website bannner.png" alt="Card 1"
-            /></a>
-            <h2>Tee's Shirts Responsive Website</h2>
-          </div>
+         
          
           <div class="card">
             <a href="https://medium.com/@shirsathkunal11/trendifyhub-shopping-app-56bcb9415fa8">
@@ -112,7 +118,12 @@
             </a>
           </div>
 
-        
+          <div class="card">
+            <a href="https://medium.com/@shirsathkunal11/tees-shirts-responsive-website-ed755456573c">
+              <img src="./assect/images/cloth website bannner.png" alt="Card 1"
+            /></a>
+            <h2>Tee's Shirts Responsive Website</h2>
+          </div>
 
          
      
@@ -120,45 +131,8 @@
       </div>
     </div>
 
-    <div class="designProcess">
-      <h1>Design Process</h1>
-      <h3>
-        In each project, I follow a user-centered design process that begins
-        with understanding user needs and ends with delivering polished,
-        high-fidelity designs.
-      </h3>
-      <div class="boxForProcess">
-        <div>
-          <span>User Research</span>
-          <p>
-            <br />Conducting interviews, surveys, and usability studies to gain
-            insights into user behavior and preferences.
-          </p>
-        </div>
-        <div>
-          <span>Ideation and Concept Development</span>
-          <p>
-            <br />Brainstorming ideas, sketching concepts, and creating
-            low-fidelity prototypes to explore design possibilities.
-          </p>
-        </div>
-        <div>
-          <span>Prototyping and Iteration</span>
-          <p>
-            <br />Building interactive prototypes to test with users and
-            gathering feedback to iterate on the design.
-          </p>
-        </div>
-        <div>
-          <span>Usability Testing</span>
-          <p>
-            <br />Conducting usability tests to identify usability issues and
-            validate design decisions before finalizing the design.
-          </p>
-        </div>
-      </div>
-    </div>
     
+
     <div class="detailInfo" id="About">
       <div class="myabo">
         <div class="imgforabout">
@@ -170,10 +144,8 @@
             A passionate <span>UX/UI designer and frontend developer</span> with a creative flair for colorful art and visual design. I recently completed the <span>Google UX Design course,</span> honing my skills in creating delightful digital experiences.
 <br><br>
 My journey in design began with a love for drawing, which led me to <span>complete an intermediate drawing course</span>. I find inspiration in the world around me, <span>exploring vibrant colors and shapes</span> to bring my designs to life.
-<br><br>
-When I'm not crafting user interfaces or writing code, you can find me indulging in my hobbies. I enjoy <span>listening to music</span> and diving into the depths of old <span>religious books,</span> finding wisdom and inspiration in their teachings.
-<br><br>
-Let's connect and create something extraordinary together!
+
+
           </h2>
           <div class="resume" style="margin-top: 30px;">
             <a href="./assect/images/A4 - 1.pdf" download>Download Resume</a>
@@ -183,82 +155,23 @@ Let's connect and create something extraordinary together!
      
     </div>
     </div>
-    <div class="skills" id="skill">
-      <h1 style="font-weight:bolder; color: #252525;">Technical Skill</h1>
-      <div class="skillSetion">
-      <div class="ux">
-        <div>
-        <h2>UX/UI Design 🎨</h2>
-        <p>
-          Experience & Interface Design <br>
-          Design System <br>
-          User Research <br>
-          Usabilty testing <br>
-          Responsive & Accessible Design <br>
-          Interactive Prototyping <br>
-          Skeching , Wireframing , ldeation <br>
-          Branding <br>
-        </p>
-      </div>
-      </div>
-      <div class="frontend">
-        <div>
-        <h2>Frontend DEV 💻</h2>
-        <p>HTML <br>
-          CSS <br>
-          JavaScript <br>
-          Responsive Design <br>
-          Git & GitHub <br>
-          React.js <br>
-          Design Principles <br>
-          Learning and Adaptability
-        </div>
-        </div>
-       
-      </div>
-      
-    </div>
+    
     
     </div>
+    
     
     <div class="footer" id="contact">
-      <div style="margin:30px 20px; text-align: center; font-size: 20px;"><h1>If you'd like to discuss potential opportunities or just connect, please don't hesitate to reach out—I'd love to hear from you!</h1></div>
-      <div class="links">
-        <a href="https://www.behance.net/kunalshirsath" 
-          ><img
-            src="./assect/images/icons8-behance-logo-512.png"
-            style="height: 30px"
-            alt="" /></a
-        ><a href="https://www.linkedin.com/in/kunal-shirsath-369om/" 
-          ><img
-            src="./assect/images/icons8-linkedin-logo-250.png"
-            style="height: 30px"
-            alt=""
-        /></a>
-
-        <a href="https://dribbble.com/shirsathkunal11"
-          ><img
-            src="./assect/images/icons8-dribbble-384.png"
-            style="height: 30px"
-            alt=""
-        /></a> <a href="https://medium.com/@shirsathkunal11" 
-        ><img
-          src="./assect/images/icons8-medium-new-250.png"
-          style="height: 30px"
-          alt=""
-      /></a> <a href="https://www.instagram.com/kunal_s73/" 
-      ><img
-        src="./assect/images/icons8-instagram-logo-384.png"
-        style="height: 30px"
-        alt=""
-    /></a>
+      <h1>Thank you for visiting my portfolio! 🚀 Let's create something amazing together!</h1>
+      <p> shirsathkunal11@gmail.com | 7588072877</p>
+     
+      <div class="linksss">
+        <p><a>Linkdin</a></p>
+        <p><a>Dribble</a></p>
+        <p><a>Twitter</a></p>
+        <p><a>Medium</a></p>
     
       </div>
-      <div style="text-align: center;"><h1 style="font-size: 25px;">Kunal Shirsath</h1>
-        shirsathkunal11@gmail.com | 758 807 2877
-      <h1>Copyright © 2024</h1>
-      </div>
+      <p>© 2023 Kunal. All rights reserved.</p>
     </div>
-    
   </body>
 </html>
