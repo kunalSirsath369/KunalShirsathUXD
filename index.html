@@ -1,212 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assect/css/index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
-    <script src="./assect/js/index.js"></script>
-  </head>
 
-  <body>
-    <div class="main">
-      <header id="navbar">
-        <nav class="navbar-container container">
-          <a href="/" class="home-link">
-            <div class="navbar-logo">
-              <div class="logo"><img src="./assect/images/Logo.png" style="height: 30px;"></div>
-            </div>
-          </a>
-          <button
-            type="button"
-            id="navbar-toggle"
-            class="btnfortogg"
-            aria-controls="navbar-menu"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-          >
-            <span style="height: 6px" class="icon-bar"></span>
-            <span style="height: 6px" class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div id="navbar-menu" aria-labelledby="navbar-toggle">
-            <ul class="navbar-links">
-              <li class="navbar-item">
-                <a class="navbar-link" href="#">HOME</a>
-              </li>
-              <li class="navbar-item">
-                <a class="navbar-link" href="#Portfolio">PORTFOLIO</a>
-              </li>
-              <li class="navbar-item">
-                <a class="navbar-link" href="#arts">ARTS</a>
-              </li>
-            
-              <li class="navbar-item">
-                <a class="navbar-link" href="#About">ABOUT</a>
-              </li>
-              <li class="navbar-item">
-                <a class="navbar-link" href="#contact">CONTACT</a>
-              </li>
-            </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assect/css/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet" />
+  <script src="./assect/js/index.js"></script>
+</head>
+
+<body>
+  <div class="main">
+    <header id="navbar">
+      <nav class="navbar-container container">
+        <a href="/" class="home-link">
+          <div class="navbar-logo">
+            <div class="logo"><img src="./assect/images/LOGO1.png" style="height: 60px; margin-top: 20px;"></div>
           </div>
-        </nav>
-        <script>
-          const navbarToggle = navbar.querySelector("#navbar-toggle");
-          const navbarMenu = document.querySelector("#navbar-menu");
-          const navbarLinksContainer =
-            navbarMenu.querySelector(".navbar-links");
-          let isNavbarExpanded =
-            navbarToggle.getAttribute("aria-expanded") === "true";
+        </a>
+        <button type="button" id="navbar-toggle" class="btnfortogg" aria-controls="navbar-menu" aria-label="Toggle menu"
+          aria-expanded="false">
+          <span style="height: 6px" class="icon-bar"></span>
+          <span style="height: 6px" class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-links">
+            <li class="navbar-item">
+              <a class="navbar-link" href="#">HOME</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#Portfolio">PORTFOLIO</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#arts">ARTS</a>
+            </li>
 
-          const toggleNavbarVisibility = () => {
-            isNavbarExpanded = !isNavbarExpanded;
-            navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
-          };
+            <li class="navbar-item">
+              <a class="navbar-link" href="#About">ABOUT</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <script>
+        const navbarToggle = navbar.querySelector("#navbar-toggle");
+        const navbarMenu = document.querySelector("#navbar-menu");
+        const navbarLinksContainer =
+          navbarMenu.querySelector(".navbar-links");
+        let isNavbarExpanded =
+          navbarToggle.getAttribute("aria-expanded") === "true";
 
-          navbarToggle.addEventListener("click", toggleNavbarVisibility);
+        const toggleNavbarVisibility = () => {
+          isNavbarExpanded = !isNavbarExpanded;
+          navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+        };
 
-          navbarLinksContainer.addEventListener("click", (e) =>
-            e.stopPropagation()
-          );
-          navbarMenu.addEventListener("click", toggleNavbarVisibility);
-        </script>
-        
-      </header>
-      <div class="herosec">
-        <h1>KUNAL SHIRSATH</h1>
-        <h2>An innovative UX Designer · Frontend Developer creating future user experience.</h2>
-    
-      </div>
+        navbarToggle.addEventListener("click", toggleNavbarVisibility);
+
+        navbarLinksContainer.addEventListener("click", (e) =>
+          e.stopPropagation()
+        );
+        navbarMenu.addEventListener("click", toggleNavbarVisibility);
+      </script>
+
+    </header>
+    <div class="herosec">
+
+      <h2>
+        Hi there, my name is Kunal, I am a UI UX designer based in India. I design applications, digital products,
+        websites, and brand identities.
+        I'm here to help turn your dreams and ideas into focused clear products.</h2>
+      <h1>Scroll down to see my work!</h1>
     </div>
-    
-     
-    </div>
-    <!-- <div class="introsection">
+  </div>
+
+
+  </div>
+  <!-- <div class="introsection">
       <img src="./assect/images/bannerforbackgrond.png" alt="" />
     </div> -->
-    <div class="mainport" id="Portfolio">
-      <div class="portfolio">
-        <h1 style="margin: 20px 0 40px 0">PORTFOLIO</h1>
-        <div class="card-container">
-          <div class="card">
-            <a href="https://medium.com/@shirsathkunal11/meloverse-music-app-38bf98560a12">
-              <img src="./assect/images/msi.png" alt="Card 1"
-            /></a>
-            <h2>MeloVerse Music App</h2>
+  <div class="mainport" id="Portfolio">
+    <div class="portfolio">
+      <h1 style="margin: 20px 0 40px 0">PORTFOLIO</h1>
+      <div class="card-container">
+        <div class="card">
+         
+            <img src="./assect/images/msi.png" alt="Card 1" /></a>
+          <div class="card-buttons">
+            <button class="btn1"><a href="https://www.figma.com/proto/MZqgjhDguq0ora2JbSWJBZ/MeloVerse-Music-App?page-id=1%3A2&type=design&node-id=213-402&viewport=717%2C247%2C1.06&t=S8VQyAX7CFFAXI1I-1&scaling=scale-down&starting-point-node-id=34%3A701&mode=design">Figma File</a></button>
+            <button class="btn2"><a href="https://medium.com/@shirsathkunal11/meloverse-music-app-38bf98560a12">Case
+                Study</a></button>
           </div>
-          <div class="card">
-            <a href="https://medium.com/@shirsathkunal11/tees-shirts-responsive-website-ed755456573c">
-              <img src="./assect/images/nike banner.png" alt="Card 1"
-            /></a>
-            <h2>Nike Banner Redesign</h2>
-          </div>
-          <div class="card">
-            <a href="https://medium.com/@shirsathkunal11/transitease-3e4336da7b5b">
-              <img src="./assect/images/Wireframe - 2.png" alt="Card 1"
-            /></a>
-            <h2>Public Transport QR Code Recharge or Buying App</h2>
-          </div>
-          <div class="card">
-            <a href="https://medium.com/@shirsathkunal11/geargamer-hub-responsive-website-857a004fad4e">
+        </div>
+        <div class="card">
+          
             <img src="./assect/images/Frame 8.png" alt="Card 1" /></a>
-            <h2>GearGamer Hub Responsive Website</h2>
+          <div class="card-buttons">
+            <button class="btn1"><a href="https://www.figma.com/proto/h3mppIsiuQgGd9Oih0wJzZ/Gaming-Equipment-purchasing-website?page-id=0%3A1&type=design&node-id=1-3&viewport=116%2C164%2C0.18&t=HeaRMWvb1DbONuKK-1&scaling=min-zoom&starting-point-node-id=1%3A3&mode=design">Figma File</a></button>
+            <button class="btn2"> <a
+                href="https://medium.com/@shirsathkunal11/geargamer-hub-responsive-website-857a004fad4e">Case
+                Study</a></button>
           </div>
-         
-         
-          <div class="card">
-            <a href="https://medium.com/@shirsathkunal11/transitease-3e4336da7b5b">
-              <img src="./assect/images/ecomporject 1.png" alt="Card 1" />
-              <h2>TrendifyHub Shopping App</h2>
-            </a>
-          </div>
-
-          <div class="card">
-            <a href="https://medium.com/@shirsathkunal11/tees-shirts-responsive-website-ed755456573c">
-              <img src="./assect/images/cloth website bannner.png" alt="Card 1"
-            /></a>
-            <h2>Tee's Shirts Responsive Website</h2>
-          </div>
-
-         
-       
         </div>
+        <div class="card">
+
+          <img src="./assect/images/nike banner.png" alt="Card 1" /></a>
+          <div class="card-buttons">
+            <button class="btn1"><a href="https://www.figma.com/proto/Wqs5hLAutfPhTV8uJflTIY/Public-Transport-QR-Code-Recharge-or-Buying-Page?page-id=0%3A1&type=design&node-id=72-1488&viewport=796%2C318%2C0.14&t=GmCTzT47CX0LymVB-1&scaling=scale-down&starting-point-node-id=69%3A131&mode=design">Figma File</a></button>
+            <button class="btn2"> <a
+                href="https://medium.com/@shirsathkunal11/tees-shirts-responsive-website-ed755456573c">Case
+                Study</a></button>
+          </div>
+
+        </div>
+        <div class="card">
+
+          <img src="./assect/images/Wireframe - 2.png" alt="Card 1" /></a>
+          <div class="card-buttons">
+            <button class="btn1"><a href="https://www.figma.com/proto/Wqs5hLAutfPhTV8uJflTIY/Public-Transport-QR-Code-Recharge-or-Buying-Page?page-id=0%3A1&type=design&node-id=72-1488&viewport=796%2C318%2C0.14&t=GmCTzT47CX0LymVB-1&scaling=scale-down&starting-point-node-id=69%3A131&mode=design">Figma File</a></button>
+            <button class="btn2"> <a href="https://medium.com/@shirsathkunal11/transitease-3e4336da7b5b">Case
+                Study</a></button>
+          </div>
+        </div>
+
+
+
+        <div class="card">
+
+          <img src="./assect/images/ecomporject 1.png" alt="Card 1" />
+          <div class="card-buttons">
+            <button class="btn1">Figma File</button>
+            <button class="btn2"><a href="https://medium.com/@shirsathkunal11/transitease-3e4336da7b5b">Case
+                Study</a></button>
+          </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="https://medium.com/@shirsathkunal11/tees-shirts-responsive-website-ed755456573c">
+            <img src="./assect/images/cloth website bannner.png" alt="Card 1" /></a>
+          <div class="card-buttons">
+            <button class="btn1">Figma File</button>
+            <button class="btn2"> <a
+                href="https://medium.com/@shirsathkunal11/tees-shirts-responsive-website-ed755456573c">Case
+                Study</a></button>
+          </div>
+        </div>
+
+
+
       </div>
     </div>
+  </div>
 
-    <div class="mainport" id="arts" >
-      <div class="portfolio">
-        <h1 style="margin: 20px 0 40px 0">ARTS</h1>
-        <div class="card-container">
-          <div class="card">
-            <a href="https://medium.com/@shirsathkunal11/meloverse-music-app-38bf98560a12">
-              <img src="./assect/images/ART1.jpg" alt="Card 1"
-            /></a>
-            <h2>ART 1</h2>
-          </div>
-          <div class="card">
-            <a href="https://medium.com/@shirsathkunal11/tees-shirts-responsive-website-ed755456573c">
-              <img src="./assect/images/ART2.jpg" alt="Card 1"
-            /></a>
-            <h2>ART 2</h2>
-          </div>
-      
-         
-         
-        
 
-         
-       
+
+  </div>
+
+
+  </div>
+  <div class="detailInfo" id="About">
+   
+    <div class="myabo">
+      <div class="imgforabout">
+        <img src="./assect/images/profile.png" alt="" />
+      </div>
+      <div class="infoAbout">
+        <h1>👋 Hello! I'm Kunal</h1>
+        <h2>
+          A passionate <span>UX/UI designer and frontend developer</span> with a creative flair for colorful art and
+          visual design. I recently completed the <span>Google UX Design course,</span> honing my skills in creating
+          delightful digital experiences.
+          <br><br>
+          My journey in design began with a love for drawing, which led me to <span>complete an intermediate drawing
+            course</span>. I find inspiration in the world around me, <span>exploring vibrant colors and shapes</span>
+          to bring my designs to life.
+
+
+        </h2>
+        <div class="resume" style="margin-top: 30px;">
+          <a href="./assect/images/A4 - 1.pdf" download>Download Resume</a>
         </div>
       </div>
-    </div>
+      <div class="education">
 
-    
+      </div>
     </div>
-    
-    
-    </div>
-    <div class="detailInfo" id="About">
-      <div class="myabo">
-        <div class="imgforabout" >
-          <img  src="./assect/images/profile.png"  alt="" />
-        </div>
-        <div class="infoAbout">
-          <h1>👋 Hello! I'm Kunal</h1>
-          <h2>
-            A passionate <span>UX/UI designer and frontend developer</span> with a creative flair for colorful art and visual design. I recently completed the <span>Google UX Design course,</span> honing my skills in creating delightful digital experiences.
-<br><br>
-My journey in design began with a love for drawing, which led me to <span>complete an intermediate drawing course</span>. I find inspiration in the world around me, <span>exploring vibrant colors and shapes</span> to bring my designs to life.
+    <div class="container">
+      <div class="main-timeline">
 
-
-          </h2>
-          <div class="resume" style="margin-top: 30px;">
-            <a href="./assect/images/A4 - 1.pdf" download>Download Resume</a>
+        <!-- start experience section-->
+        <div class="timeline">
+          <div class="icon"></div>
+          <div class="date-content">
+            <div class="date-outer">
+              <span class="date">
+                <span class="month">3 Years</span>
+                <span class="year">2022</span>
+              </span>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <h5 class="title">Diploma in computer engineering</h5>
+            <p class="description">
+              Government polytechnic ambad, Maharashtra <br> <br>
+              Acquired in-depth knowledge of computer systems, software development, and hardware engineering.
+            </p>
           </div>
         </div>
+        <!-- end experience section-->
+
+        <!-- start experience section-->
+        <div class="timeline">
+          <div class="icon"></div>
+          <div class="date-content">
+            <div class="date-outer">
+              <span class="date">
+                <span class="month">6 Month</span>
+                <span class="year">2024</span>
+              </span>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <h5 class="title">Google UX Design Professional Certificate</h5>
+            <p class="description">
+              Cosera <br> <br>
+              The UI/UX Design Specialization brings a design-centric approach to user interface and user experience
+              design.
+            </p>
+          </div>
+        </div>
+        <!-- end experience section-->
+
+        <!-- start experience section-->
+        <div class="timeline">
+          <div class="icon"></div>
+          <div class="date-content">
+            <div class="date-outer">
+              <span class="date">
+                <span class="month">1 Month</span>
+                <span class="year">2024</span>
+              </span>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <h5 class="title">Ux Designer • Internship</h5>
+            <p class="description">
+              Mountech Solution Limited <br> <br>
+              Collaborated effectively with cross-functional teams to deliver
+              user-centric solutions
+            </p>
+          </div>
+        </div>
+        <!-- end experience section-->
+
+        <!-- start experience section-->
+        <div class="timeline">
+          <div class="icon"></div>
+          <div class="date-content">
+            <div class="date-outer">
+              <span class="date">
+                <span class="month">1 Month</span>
+                <span class="year">2024</span>
+              </span>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <h5 class="title">UX designer • Full-time</h5>
+            <p class="description">
+              Handatech Solution Limited <br> <br>
+              Collaborated effectively with cross-functional teams to deliver user-centric solutions.
+            </p>
+          </div>
+        </div>
+        <!-- end experience section-->
+
       </div>
-    
+    </div>
     <div class="footer" id="contact">
       <h1>Thank you for visiting my portfolio! 🚀 Let's create something amazing together!</h1>
-      <p> shirsathkunal11@gmail.com | 7588072877</p>
-     
+   
+
       <div class="linksss">
-        <a href="https://www.linkedin.com/in/kunal-shirsath-369om/">Linkdin</a>
-        <p><a  href="https://dribbble.com/shirsathkunal11">Dribble</a></p>
+       <P><a href="https://www.linkedin.com/in/kunal-shirsath-369om/">Linkdin</a></P> 
+        <p><a href="https://dribbble.com/shirsathkunal11">Dribble</a></p>
         <p><a href="https://twitter.com/kunal_64159">Twitter</a></p>
         <p><a href="https://medium.com/@shirsathkunal11">Medium</a></p>
-    
+
       </div>
-      <p>© 2023 Kunal. All rights reserved.</p>
+      <p class="mail"> shirsathkunal11@gmail.com | 7588072877</p>
+      <p class="copyright">© 2023 Kunal. All rights reserved.</p>
     </div>
-  </body>
+</body>
+
 </html>
