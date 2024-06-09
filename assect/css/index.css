@@ -477,6 +477,12 @@ font-weight: 300;
     font-size: 18px;
     margin-bottom: 30px;
   }
+  .detailInfo h2 {
+    font-size: 15px;
+}
+.myabo{
+  margin: 20px;
+}
 }
 
 @media only screen and (min-width: 768px) {
@@ -526,6 +532,9 @@ background: #ffffff;
   }
   .infoAbout {
     margin-right: 60px;
+  }
+  .infoAbout h2{
+    font-size: 12px;
   }
   .detailInfo h1 {
     margin: 10px 0;
@@ -766,6 +775,7 @@ background: #ffffff;
     color: white;
     border-radius: 400px;
     font-weight: 600;
+    font-size: 12px;
   }
   .btn2{
     padding: 1em 2em 1em;
@@ -774,6 +784,7 @@ background: #ffffff;
     color: black;
     border: #000000 1px solid;
     border-radius: 400px;
+    font-size: 12px;
   }
   
 }
